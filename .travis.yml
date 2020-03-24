@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  -docker build -t tomaszpkaminski/react-test -f ./client/Dockerfile.dev ./cilent
+  -docker build -t tomaszpkaminski/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true tomaszpkaminski/react-test npm test
